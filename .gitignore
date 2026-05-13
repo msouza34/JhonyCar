@@ -1,0 +1,63 @@
+# Backend build
+target/
+*.class
+
+# Frontend build and deps
+frontend/node_modules/
+frontend/dist/
+
+# Logs
+*.log
+*.err.log
+*.out.log
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Vite temp timestamp files
+frontend/vite.config.js.timestamp-*.mjs
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Runtime storage (generated files)
+storage/
+
+# Local environment secrets
+.env
+.env.*
+*.env.local
+!.env.example
+!.env.*.example
+
+# Frontend local env
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# Certificates / private keys / secret stores
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.kdbx
+*.crt
+*.cer
+*.der
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+
+# IDE files
+.vscode/
+.idea/
+
+# Postman local environment (can contain auth tokens)
+postman/*Local.postman_environment.json
+!postman/*.postman_environment.example.json

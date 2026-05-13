@@ -1,0 +1,69 @@
+spring:
+  application:
+    name: jhonycar-backend
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/jhonycar}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+  cache:
+    type: redis
+
+server:
+  port: ${PORT:8080}
+
+logging:
+  level:
+    root: INFO
+    com.jhonycar.backend: INFO
+
+app:
+  base-url: ${APP_BASE_URL:http://localhost:8080}
+  cors:
+    allowed-origins: ${APP_CORS_ALLOWED_ORIGINS:http://localhost:5173,http://127.0.0.1:5173}
+  pdf:
+    storage-dir: ${APP_PDF_STORAGE_DIR:storage/notas}
+  veiculos:
+    image-storage-dir: ${APP_VEICULOS_IMAGE_STORAGE_DIR:storage/veiculos}
+    cache-ttl-seconds: ${APP_VEICULOS_CACHE_TTL_SECONDS:300}
+  fipe:
+    enabled: ${APP_FIPE_ENABLED:false}
+    base-url: ${APP_FIPE_BASE_URL:https://parallelum.com.br/fipe/api/v1}
+  os:
+    archive-cron: ${APP_OS_ARCHIVE_CRON:0 0 0 * * *}
+    archive-zone: ${APP_OS_ARCHIVE_ZONE:America/Sao_Paulo}
+  async:
+    fipe-import:
+      core-pool-size: ${APP_ASYNC_FIPE_IMPORT_CORE_POOL_SIZE:2}
+      max-pool-size: ${APP_ASYNC_FIPE_IMPORT_MAX_POOL_SIZE:4}
+      queue-capacity: ${APP_ASYNC_FIPE_IMPORT_QUEUE_CAPACITY:100}
+  jwt:
+    secret: ${JWT_SECRET}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+
+springdoc:
+  api-docs:
+    enabled: ${SPRINGDOC_API_DOCS_ENABLED:false}
+  swagger-ui:
+    enabled: ${SPRINGDOC_SWAGGER_UI_ENABLED:false}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
