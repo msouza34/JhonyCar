@@ -197,8 +197,8 @@ Request:
 
 ```json
 {
-  "username": "admin",
-  "password": "admin123"
+  "username": "*",
+  "password": "*"
 }
 ```
 
@@ -218,7 +218,7 @@ Response (exemplo):
 
 Criadas no startup (se nao existirem):
 
-- `admin` / `admin123` com role `ADMIN`
+- `admin` / `*` com role `ADMIN`
 - `funcionario` / `func123` com role `FUNCIONARIO`
 
 ## 6.3 Envio do token
