@@ -1,329 +1,145 @@
-🚗 JhonyCar — Sistema de Gestão para Auto Elétrica
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Sistema SaaS profissional para gestão completa de oficinas de auto elétrica, centralizado em atendimento do cliente, ordens de serviço, orçamentos, financeiro, agenda e notas fiscais.
-
-
-
-
-📋 Sumário
-
-•
-Visão Geral
-
-•
-Características Principais
-
-•
-Arquitetura do Sistema
-
-•
-Stack Tecnológico
-
-•
-Estrutura do Projeto
-
-•
-Início Rápido
-
-•
-Módulos do Sistema
-
-•
-Banco de Dados
-
-•
-API REST
-
-•
-Autenticação e Segurança
-
-•
-Frontend React
-
-•
-Cache e Performance
-
-•
-Deployment
-
-•
-Troubleshooting
-
-•
-Roadmap
-
-
-
-
-👀 Visão Geral
-
-Objetivo
-
-O JhonyCar é uma solução SaaS (Software as a Service) completa para oficinas de auto elétrica, eliminando silos de informação e centralizando todo o fluxo operacional em uma plataforma única e intuitiva.
-
-Problema Resolvido
+# 🚗 JhonyCar — Sistema de Gestão para Auto Elétrica
+
+[![Java](https://img.shields.io/badge/Java-17-orange?logo=java)](https://www.oracle.com/java/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-green?logo=spring)](https://spring.io/projects/spring-boot)
+[![React](https://img.shields.io/badge/React-19-blue?logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue?logo=postgresql)](https://www.postgresql.org/)
+[![Redis](https://img.shields.io/badge/Redis-7-red?logo=redis)](https://redis.io/)
+[![Docker](https://img.shields.io/badge/Docker-Compose-blue?logo=docker)](https://www.docker.com/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+**Sistema SaaS profissional para gestão completa de oficinas de auto elétrica, centralizado em atendimento do cliente, ordens de serviço, orçamentos, financeiro, agenda e notas fiscais.**
+
+---
+
+## 📋 Sumário
+
+- [Visão Geral](#-visão-geral)
+- [Características Principais](#-características-principais)
+- [Arquitetura do Sistema](#-arquitetura-do-sistema)
+- [Stack Tecnológico](#-stack-tecnológico)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Início Rápido](#-início-rápido)
+- [Módulos do Sistema](#-módulos-do-sistema)
+- [Banco de Dados](#-banco-de-dados)
+- [API REST](#-api-rest)
+- [Autenticação e Segurança](#-autenticação-e-segurança)
+- [Frontend React](#-frontend-react)
+- [Cache e Performance](#-cache-e-performance)
+- [Deployment](#-deployment)
+- [Troubleshooting](#-troubleshooting)
+- [Roadmap](#-roadmap)
+
+---
+
+## 👀 Visão Geral
+
+### Objetivo
+
+O **JhonyCar** é uma solução SaaS (Software as a Service) completa para oficinas de auto elétrica, eliminando silos de informação e centralizando todo o fluxo operacional em uma plataforma única e intuitiva.
+
+### Problema Resolvido
 
 Oficinas de auto elétrica enfrentam desafios operacionais críticos:
 
-•
-❌ Informações dispersas em múltiplos sistemas
+- ❌ Informações dispersas em múltiplos sistemas
+- ❌ Falta de visibilidade em tempo real do status dos serviços
+- ❌ Dificuldade em gerenciar agenda e recursos
+- ❌ Controle financeiro inadequado
+- ❌ Falta de histórico de atendimento do cliente
 
-•
-❌ Falta de visibilidade em tempo real do status dos serviços
+### Solução Oferecida
 
-•
-❌ Dificuldade em gerenciar agenda e recursos
+✅ **Centralização Completa** — Todos os dados em um único lugar
 
-•
-❌ Controle financeiro inadequado
+✅ **Fluxo Integrado** — Do cadastro do cliente até a nota fiscal
 
-•
-❌ Falta de histórico de atendimento do cliente
+✅ **Dashboard Inteligente** — Métricas em tempo real e alertas
 
-Solução Oferecida
+✅ **Escalabilidade** — Suporta múltiplas oficinas (multi-tenant)
 
-✅ Centralização Completa — Todos os dados em um único lugar
+✅ **Segurança** — Autenticação, autorização e criptografia
 
-✅ Fluxo Integrado — Do cadastro do cliente até a nota fiscal
+✅ **Performance** — Cache distribuído com Redis
 
-✅ Dashboard Inteligente — Métricas em tempo real e alertas
+---
 
-✅ Escalabilidade — Suporta múltiplas oficinas (multi-tenant)
+## ⭐ Características Principais
 
-✅ Segurança — Autenticação, autorização e criptografia
+### 1. Gestão de Clientes
 
-✅ Performance — Cache distribuído com Redis
+- Cadastro completo com histórico de atendimentos
+- Segmentação por tipo de cliente (PF/PJ)
+- Histórico de serviços realizados
+- Contatos e endereços múltiplos
+- Sistema de notas e observações
 
+### 2. Gestão de Veículos
 
+- Cadastro de veículos por cliente
+- Histórico de manutenções
+- Rastreamento de peças e componentes
+- Alertas de manutenção preventiva
+- Documentação de garantias
 
+### 3. Ordens de Serviço (OS)
 
-⭐ Características Principais
+- Criação rápida de OS com fluxo definido
+- Estados: Entrada → Diagnóstico → Aguardando Aprovação → Em Execução → Finalizado
+- Atribuição de técnicos
+- Acompanhamento em tempo real
+- Histórico completo de ações
 
-1. Gestão de Clientes
+### 4. Orçamentos
 
-•
-Cadastro completo com histórico de atendimentos
+- Geração automática de orçamentos
+- Vinculação com OS
+- Aprovação/Rejeição de clientes
+- Histórico de revisões
+- Comparação com orçamentos anteriores
 
-•
-Segmentação por tipo de cliente (PF/PJ)
+### 5. Financeiro
 
-•
-Histórico de serviços realizados
+- Controle de receitas e despesas
+- Integração com OS e orçamentos
+- Relatórios de faturamento
+- Gestão de pagamentos
+- Análise de lucratividade por serviço
 
-•
-Contatos e endereços múltiplos
+### 6. Agenda
 
-•
-Sistema de notas e observações
+- Calendário integrado
+- Agendamento de serviços
+- Bloqueio de horários
+- Notificações de compromissos
+- Sincronização com Google Calendar (opcional)
 
-2. Gestão de Veículos
+### 7. Notas Fiscais Simuladas
 
-•
-Cadastro de veículos por cliente
+- Geração de NF-e simuladas
+- Integração com OS
+- Histórico de emissões
+- Reemissão de NF
+- Conformidade fiscal
 
-•
-Histórico de manutenções
+### 8. Dashboard Executivo
 
-•
-Rastreamento de peças e componentes
+- KPIs em tempo real
+- Ordens em aberto
+- Faturamento do dia/semana/mês
+- Tempo médio de serviço
+- Taxa de ocupação
+- Alertas importantes
+- Gráficos de tendências
 
-•
-Alertas de manutenção preventiva
+---
 
-•
-Documentação de garantias
+## 🏗️ Arquitetura do Sistema
 
-3. Ordens de Serviço (OS)
+### Visão Geral em Camadas
 
-•
-Criação rápida de OS com fluxo definido
-
-•
-Estados: Entrada → Diagnóstico → Aguardando Aprovação → Em Execução → Finalizado
-
-•
-Atribuição de técnicos
-
-•
-Acompanhamento em tempo real
-
-•
-Histórico completo de ações
-
-4. Orçamentos
-
-•
-Geração automática de orçamentos
-
-•
-Vinculação com OS
-
-•
-Aprovação/Rejeição de clientes
-
-•
-Histórico de revisões
-
-•
-Comparação com orçamentos anteriores
-
-5. Financeiro
-
-•
-Controle de receitas e despesas
-
-•
-Integração com OS e orçamentos
-
-•
-Relatórios de faturamento
-
-•
-Gestão de pagamentos
-
-•
-Análise de lucratividade por serviço
-
-6. Agenda
-
-•
-Calendário integrado
-
-•
-Agendamento de serviços
-
-•
-Bloqueio de horários
-
-•
-Notificações de compromissos
-
-•
-Sincronização com Google Calendar (opcional)
-
-7. Notas Fiscais Simuladas
-
-•
-Geração de NF-e simuladas
-
-•
-Integração com OS
-
-•
-Histórico de emissões
-
-•
-Reemissão de NF
-
-•
-Conformidade fiscal
-
-8. Dashboard Executivo
-
-•
-KPIs em tempo real
-
-•
-Ordens em aberto
-
-•
-Faturamento do dia/semana/mês
-
-•
-Tempo médio de serviço
-
-•
-Taxa de ocupação
-
-•
-Alertas importantes
-
-•
-Gráficos de tendências
-
-
-
-
-🏗️ Arquitetura do Sistema
-
-Visão Geral em Camadas
-
-Plain Text
-
-
+```
 ┌─────────────────────────────────────────────┐
 │         Frontend (React + TypeScript)        │
 │  Dashboard | Clientes | Veículos | OS | etc │
@@ -350,14 +166,11 @@ Plain Text
 │  PostgreSQL  │  │  Redis Cache  │
 │   (Primary)  │  │  (Secondary)  │
 └──────────────┘  └───────────────┘
+```
 
+### Fluxo de Requisição
 
-
-Fluxo de Requisição
-
-Plain Text
-
-
+```
 1. Cliente faz requisição HTTP
     ↓
 2. API Gateway valida CORS
@@ -375,153 +188,70 @@ Plain Text
 8. Resposta formatada em JSON
     ↓
 9. Cliente recebe dados
+```
 
+### Padrões Arquiteturais
 
+| Padrão | Aplicação | Benefício |
+|--------|-----------|-----------|
+| **MVC** | Separação de Controller, Service, Repository | Manutenibilidade |
+| **DTO** | Transferência de dados entre camadas | Segurança e performance |
+| **Repository** | Abstração do acesso a dados | Testabilidade |
+| **Service Layer** | Lógica de negócio centralizada | Reutilização |
+| **Dependency Injection** | Spring IoC Container | Desacoplamento |
+| **Cache-Aside** | Redis para dados frequentes | Performance |
+| **Multi-Tenant** | Isolamento por `tenantId` | Escalabilidade |
 
-Padrões Arquiteturais
+---
 
-Padrão
-Aplicação
-Benefício
-MVC
-Separação de Controller, Service, Repository
-Manutenibilidade
-DTO
-Transferência de dados entre camadas
-Segurança e performance
-Repository
-Abstração do acesso a dados
-Testabilidade
-Service Layer
-Lógica de negócio centralizada
-Reutilização
-Dependency Injection
-Spring IoC Container
-Desacoplamento
-Cache-Aside
-Redis para dados frequentes
-Performance
-Multi-Tenant
-Isolamento por tenantId
-Escalabilidade
+## 🛠️ Stack Tecnológico
 
+### Backend
 
+| Componente | Versão | Propósito |
+|-----------|--------|----------|
+| **Java** | 17 LTS | Linguagem, estabilidade |
+| **Spring Boot** | 3.x | Framework web |
+| **Spring Web** | 3.x | REST API |
+| **Spring Data JPA** | 3.x | ORM e persistência |
+| **Spring Data Redis** | 3.x | Cache distribuído |
+| **Spring Security** | 3.x | Autenticação JWT |
+| **PostgreSQL** | 16 | Banco de dados relacional |
+| **Redis** | 7 | Cache em memória |
+| **Flyway** | 9.x | Migrações versionadas |
+| **Lombok** | 1.18.x | Redução de boilerplate |
+| **Validation** | 3.x | Validação de dados |
 
+### Frontend
 
+| Componente | Versão | Propósito |
+|-----------|--------|----------|
+| **React** | 19 | UI library |
+| **TypeScript** | 5.x | Type safety |
+| **Vite** | 5.x | Build tool |
+| **Tailwind CSS** | 4.x | Styling |
+| **React Router** | 6.x | Roteamento |
+| **Axios** | 1.x | HTTP client |
+| **React Query** | 5.x | State management |
+| **Zustand** | 4.x | Global state |
+| **Recharts** | 2.x | Gráficos |
+| **shadcn/ui** | - | Componentes UI |
 
+### Infraestrutura
 
+| Componente | Versão | Propósito |
+|-----------|--------|----------|
+| **Docker** | Latest | Containerização |
+| **Docker Compose** | 2.x | Orquestração local |
+| **Nginx** | Latest | Reverse proxy |
 
-🛠️ Stack Tecnológico
+---
 
-Backend
+## 📁 Estrutura do Projeto
 
-Componente
-Versão
-Propósito
-Java
-17 LTS
-Linguagem, estabilidade
-Spring Boot
-3.x
-Framework web
-Spring Web
-3.x
-REST API
-Spring Data JPA
-3.x
-ORM e persistência
-Spring Data Redis
-3.x
-Cache distribuído
-Spring Security
-3.x
-Autenticação JWT
-PostgreSQL
-16
-Banco de dados relacional
-Redis
-7
-Cache em memória
-Flyway
-9.x
-Migrações versionadas
-Lombok
-1.18.x
-Redução de boilerplate
-Validation
-3.x
-Validação de dados
+### Diretório Backend
 
-
-
-
-Frontend
-
-Componente
-Versão
-Propósito
-React
-19
-UI library
-TypeScript
-5.x
-Type safety
-Vite
-5.x
-Build tool
-Tailwind CSS
-4.x
-Styling
-React Router
-6.x
-Roteamento
-Axios
-1.x
-HTTP client
-React Query
-5.x
-State management
-Zustand
-4.x
-Global state
-Recharts
-2.x
-Gráficos
-shadcn/ui
--
-Componentes UI
-
-
-
-
-Infraestrutura
-
-Componente
-Versão
-Propósito
-Docker
-Latest
-Containerização
-Docker Compose
-2.x
-Orquestração local
-Nginx
-Latest
-Reverse proxy
-
-
-
-
-
-
-
-📁 Estrutura do Projeto
-
-Diretório Backend
-
-Plain Text
-
-
+```
 backend/
 ├── src/
 │   ├── main/
@@ -591,14 +321,11 @@ backend/
 ├── pom.xml
 ├── Dockerfile
 └── docker-compose.yml
+```
 
+### Diretório Frontend
 
-
-Diretório Frontend
-
-Plain Text
-
-
+```
 frontend/
 ├── src/
 │   ├── pages/
@@ -643,208 +370,128 @@ frontend/
 ├── tsconfig.json
 ├── tailwind.config.js
 └── package.json
+```
 
+---
 
+## 🚀 Início Rápido
 
+### Pré-requisitos
 
+- Docker e Docker Compose instalados
+- Git
+- Node.js 18+ (opcional, para desenvolvimento frontend)
+- Java 17 e Maven (opcional, para desenvolvimento backend)
 
+### Execução com Docker Compose
 
-🚀 Início Rápido
+![JhonyCar Dashboard](https://private-us-east-1.manuscdn.com/sessionFile/A3o456sE81OwZt9ehQb4M4/sandbox/TT4irak9gKYjqem8LufE7v-images_1778543369429_na1fn_L2hvbWUvdWJ1bnR1L1Npc3RlbWEtSmhvbnlDYXI.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvQTNvNDU2c0U4MU93WnQ5ZWhRYjRNNC9zYW5kYm94L1RUNGlyYWs5Z0tZanFlbThMdWZFN3YtaW1hZ2VzXzE3Nzg1NDMzNjk0MjlfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwxTnBjM1JsYldFdFNtaHZibmxEWVhJLnBuZyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=WTqKaGv98PoGV7G7h8YkhVuqE3Gj90QtZ7zpeASxVkQL2o6tl48m8LGvWOpGqqjEEU64RE9ajwEZLocIIFMuFd1BCWnzKJ1B3Eqm-7e1unpPjXjNloaZsA4yjTjHn4P0yEo567byASWyWE1mbwpdRLgZH4oK~-Gqg6UNu80MTnS-nvrExhRoISYe1AShYa0j9wuZ6hqy2e9xR10lZmrJYFANYC9tPSeoMoNz41zE5vd7saUuwU0D9fxNt8TfrKLQogMugLOUEU-~5KFiVsZJSU0~hH3SHhaXTKC8RAVTTpt2KGFRamsZUIiY-71EhFZ6Yqo6Khh9Muos~dFmumb~IQ__)
 
-Pré-requisitos
+**1. Clonar repositório:**
 
-•
-Docker e Docker Compose instalados
-
-•
-Git
-
-•
-Node.js 18+ (opcional, para desenvolvimento frontend)
-
-•
-Java 17 e Maven (opcional, para desenvolvimento backend)
-
-Execução com Docker Compose
-
-
-
-
-
-
-
-
-
-
-
-1. Clonar repositório:
-
-Bash
-
-
+```bash
 git clone https://github.com/seu-usuario/jhonycar.git
 cd jhonycar
+```
 
+**2. Subir ambiente completo:**
 
-
-2. Subir ambiente completo:
-
-Bash
-
-
+```bash
 docker compose up --build -d
+```
 
+**3. Acessar aplicação:**
 
+- **Frontend:** http://localhost:5173
+- **Backend API:** http://localhost:8080
+- **PostgreSQL:** localhost:5432
+- **Redis:** localhost:6379
 
-3. Acessar aplicação:
+**4. Credenciais iniciais:**
 
-•
-Frontend: http://localhost:5173
+| Usuário | Senha | Perfil |
+|---------|-------|--------|
+| `admin` | `[CONFIGURE_NO_ENV]` | ADMIN |
+| `funcionario` | `[CONFIGURE_NO_ENV]` | FUNCIONARIO |
 
-•
-Backend API: http://localhost:8080
+⚠️ **Segurança:** Nunca commite credenciais no repositório. Use variáveis de ambiente ou `.env` (não versionado).
 
-•
-PostgreSQL: localhost:5432
+### Execução Local (Desenvolvimento)
 
-•
-Redis: localhost:6379
+**Backend:**
 
-4. Credenciais iniciais:
-
-Usuário
-Senha
-Perfil
-admin
-[CONFIGURE_NO_ENV]
-ADMIN
-funcionario
-[CONFIGURE_NO_ENV]
-FUNCIONARIO
-
-
-
-
-⚠️ Segurança: Nunca commite credenciais no repositório. Use variáveis de ambiente ou .env (não versionado ).
-
-Execução Local (Desenvolvimento)
-
-Backend:
-
-Bash
-
-
+```bash
 cd backend
 mvn spring-boot:run -Dspring-boot.run.profiles=dev
+```
 
+**Frontend:**
 
-
-Frontend:
-
-Bash
-
-
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
+---
 
+## 📦 Módulos do Sistema
 
+### 1. Módulo de Clientes
 
+**Funcionalidades:**
 
+- Cadastro de clientes (PF/PJ)
+- Histórico de atendimentos
+- Múltiplos contatos e endereços
+- Notas e observações
+- Segmentação por tipo
 
-📦 Módulos do Sistema
+**Endpoints:**
 
-1. Módulo de Clientes
-
-Funcionalidades:
-
-•
-Cadastro de clientes (PF/PJ)
-
-•
-Histórico de atendimentos
-
-•
-Múltiplos contatos e endereços
-
-•
-Notas e observações
-
-•
-Segmentação por tipo
-
-Endpoints:
-
-Plain Text
-
-
+```
 POST   /api/clients              # Criar cliente
 GET    /api/clients              # Listar clientes
 GET    /api/clients/{id}         # Buscar cliente
 PUT    /api/clients/{id}         # Atualizar cliente
 DELETE /api/clients/{id}         # Deletar cliente
 GET    /api/clients/{id}/history # Histórico de atendimentos
+```
 
+### 2. Módulo de Veículos
 
+**Funcionalidades:**
 
-2. Módulo de Veículos
+- Cadastro de veículos
+- Associação com cliente
+- Histórico de manutenções
+- Rastreamento de peças
+- Alertas de manutenção preventiva
 
-Funcionalidades:
+**Endpoints:**
 
-•
-Cadastro de veículos
-
-•
-Associação com cliente
-
-•
-Histórico de manutenções
-
-•
-Rastreamento de peças
-
-•
-Alertas de manutenção preventiva
-
-Endpoints:
-
-Plain Text
-
-
+```
 POST   /api/vehicles              # Criar veículo
 GET    /api/vehicles              # Listar veículos
 GET    /api/vehicles/{id}         # Buscar veículo
 PUT    /api/vehicles/{id}         # Atualizar veículo
 DELETE /api/vehicles/{id}         # Deletar veículo
 GET    /api/vehicles/{id}/history # Histórico de manutenções
+```
 
+### 3. Módulo de Ordens de Serviço
 
+**Funcionalidades:**
 
-3. Módulo de Ordens de Serviço
+- Criação de OS com fluxo definido
+- Estados: Entrada → Diagnóstico → Aguardando Aprovação → Em Execução → Finalizado
+- Atribuição de técnicos
+- Acompanhamento em tempo real
+- Histórico completo
 
-Funcionalidades:
+**Endpoints:**
 
-•
-Criação de OS com fluxo definido
-
-•
-Estados: Entrada → Diagnóstico → Aguardando Aprovação → Em Execução → Finalizado
-
-•
-Atribuição de técnicos
-
-•
-Acompanhamento em tempo real
-
-•
-Histórico completo
-
-Endpoints:
-
-Plain Text
-
-
+```
 POST   /api/orders                # Criar OS
 GET    /api/orders                # Listar OS
 GET    /api/orders/{id}           # Buscar OS
@@ -852,33 +499,21 @@ PUT    /api/orders/{id}           # Atualizar OS
 DELETE /api/orders/{id}           # Deletar OS
 PUT    /api/orders/{id}/status    # Alterar status
 GET    /api/orders/{id}/history   # Histórico de alterações
+```
 
+### 4. Módulo de Orçamentos
 
+**Funcionalidades:**
 
-4. Módulo de Orçamentos
+- Geração de orçamentos
+- Vinculação com OS
+- Aprovação/Rejeição
+- Histórico de revisões
+- Comparação com anteriores
 
-Funcionalidades:
+**Endpoints:**
 
-•
-Geração de orçamentos
-
-•
-Vinculação com OS
-
-•
-Aprovação/Rejeição
-
-•
-Histórico de revisões
-
-•
-Comparação com anteriores
-
-Endpoints:
-
-Plain Text
-
-
+```
 POST   /api/budgets              # Criar orçamento
 GET    /api/budgets              # Listar orçamentos
 GET    /api/budgets/{id}         # Buscar orçamento
@@ -886,116 +521,76 @@ PUT    /api/budgets/{id}         # Atualizar orçamento
 DELETE /api/budgets/{id}         # Deletar orçamento
 PUT    /api/budgets/{id}/approve # Aprovar orçamento
 PUT    /api/budgets/{id}/reject  # Rejeitar orçamento
+```
 
+### 5. Módulo Financeiro
 
+**Funcionalidades:**
 
-5. Módulo Financeiro
+- Controle de receitas e despesas
+- Integração com OS e orçamentos
+- Relatórios de faturamento
+- Gestão de pagamentos
+- Análise de lucratividade
 
-Funcionalidades:
+**Endpoints:**
 
-•
-Controle de receitas e despesas
-
-•
-Integração com OS e orçamentos
-
-•
-Relatórios de faturamento
-
-•
-Gestão de pagamentos
-
-•
-Análise de lucratividade
-
-Endpoints:
-
-Plain Text
-
-
+```
 GET    /api/finance/dashboard    # Dashboard financeiro
 GET    /api/finance/revenue      # Receitas
 GET    /api/finance/expenses     # Despesas
 GET    /api/finance/reports      # Relatórios
 POST   /api/finance/payments     # Registrar pagamento
 GET    /api/finance/profitability # Análise de lucratividade
+```
 
+### 6. Módulo de Agenda
 
+**Funcionalidades:**
 
-6. Módulo de Agenda
+- Calendário integrado
+- Agendamento de serviços
+- Bloqueio de horários
+- Notificações
+- Sincronização (opcional)
 
-Funcionalidades:
+**Endpoints:**
 
-•
-Calendário integrado
-
-•
-Agendamento de serviços
-
-•
-Bloqueio de horários
-
-•
-Notificações
-
-•
-Sincronização (opcional)
-
-Endpoints:
-
-Plain Text
-
-
+```
 GET    /api/schedule/calendar    # Calendário
 POST   /api/schedule/appointments # Agendar
 GET    /api/schedule/appointments # Listar agendamentos
 PUT    /api/schedule/appointments/{id} # Atualizar agendamento
 DELETE /api/schedule/appointments/{id} # Cancelar agendamento
+```
 
+### 7. Módulo Dashboard
 
+**Funcionalidades:**
 
-7. Módulo Dashboard
+- KPIs em tempo real
+- Gráficos de tendências
+- Alertas importantes
+- Resumo financeiro
+- Ações rápidas
 
-Funcionalidades:
+**Endpoints:**
 
-•
-KPIs em tempo real
-
-•
-Gráficos de tendências
-
-•
-Alertas importantes
-
-•
-Resumo financeiro
-
-•
-Ações rápidas
-
-Endpoints:
-
-Plain Text
-
-
+```
 GET    /api/dashboard/kpis       # KPIs
 GET    /api/dashboard/orders     # Resumo de OS
 GET    /api/dashboard/finance    # Resumo financeiro
 GET    /api/dashboard/alerts     # Alertas
 GET    /api/dashboard/metrics    # Métricas
+```
 
+---
 
+## 💾 Banco de Dados
 
+### Schema Principal
 
-
-
-💾 Banco de Dados
-
-Schema Principal
-
-SQL
-
-
+```sql
 -- Usuários
 CREATE TABLE users (
   id UUID PRIMARY KEY,
@@ -1098,32 +693,23 @@ CREATE TABLE schedule (
   FOREIGN KEY (order_id) REFERENCES service_orders(id),
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
+```
 
+### Migrações Flyway
 
+Localização: `backend/src/main/resources/db/migration/`
 
-Migrações Flyway
+- `V1__init_schema.sql` — Schema inicial
+- `V2__add_indexes.sql` — Índices para performance
+- `V3__add_audit_tables.sql` — Tabelas de auditoria
 
-Localização: backend/src/main/resources/db/migration/
+---
 
-•
-V1__init_schema.sql — Schema inicial
+## 🔐 Autenticação e Segurança
 
-•
-V2__add_indexes.sql — Índices para performance
+### Fluxo de Autenticação
 
-•
-V3__add_audit_tables.sql — Tabelas de auditoria
-
-
-
-
-🔐 Autenticação e Segurança
-
-Fluxo de Autenticação
-
-Plain Text
-
-
+```
 1. Usuário faz login com email/senha
     ↓
 2. Backend valida credenciais
@@ -1139,105 +725,71 @@ Plain Text
 7. JwtAuthenticationFilter valida token
     ↓
 8. Requisição é processada se válida
+```
 
+### Endpoints de Autenticação
 
-
-Endpoints de Autenticação
-
-Plain Text
-
-
+```
 POST   /api/auth/login           # Login
 POST   /api/auth/refresh         # Renovar token
 POST   /api/auth/logout          # Logout
 GET    /api/auth/me              # Dados do usuário
+```
 
+### Segurança Implementada
 
+✅ **JWT (JSON Web Token)** — Autenticação stateless
 
-Segurança Implementada
+✅ **BCrypt** — Hashing de senhas
 
-✅ JWT (JSON Web Token) — Autenticação stateless
+✅ **CORS** — Controle de origem
 
-✅ BCrypt — Hashing de senhas
+✅ **HTTPS** — Criptografia em trânsito
 
-✅ CORS — Controle de origem
+✅ **Rate Limiting** — Proteção contra brute force
 
-✅ HTTPS — Criptografia em trânsito
+✅ **Multi-Tenant** — Isolamento de dados por `tenantId`
 
-✅ Rate Limiting — Proteção contra brute force
+✅ **Validação de Entrada** — Sanitização de dados
 
-✅ Multi-Tenant — Isolamento de dados por tenantId
+✅ **Logs de Auditoria** — Rastreamento de ações
 
-✅ Validação de Entrada — Sanitização de dados
+---
 
-✅ Logs de Auditoria — Rastreamento de ações
+## ⚡ Cache e Performance
 
+### Estratégia de Cache
 
+- **Padrão:** Cache-Aside (Lazy Loading)
+- **Armazenamento:** Redis
+- **TTL:** Configurável por tipo de dado
 
+### Dados em Cache
 
-⚡ Cache e Performance
+| Dados | TTL | Chave |
+|-------|-----|-------|
+| Clientes | 1h | `client:{id}` |
+| Veículos | 1h | `vehicle:{id}` |
+| Ordens | 30min | `order:{id}` |
+| Usuários | 2h | `user:{id}` |
+| Dashboard | 5min | `dashboard:{tenantId}` |
 
-Estratégia de Cache
-
-•
-Padrão: Cache-Aside (Lazy Loading)
-
-•
-Armazenamento: Redis
-
-•
-TTL: Configurável por tipo de dado
-
-Dados em Cache
-
-Dados
-TTL
-Chave
-Clientes
-1h
-client:{id}
-Veículos
-1h
-vehicle:{id}
-Ordens
-30min
-order:{id}
-Usuários
-2h
-user:{id}
-Dashboard
-5min
-dashboard:{tenantId}
-
-
-
-
-Invalidação de Cache
+### Invalidação de Cache
 
 Cache é invalidado automaticamente em:
 
-1.
-Criação de novo registro
+1. Criação de novo registro
+2. Atualização de registro
+3. Exclusão de registro
+4. Alteração de status
 
-2.
-Atualização de registro
+---
 
-3.
-Exclusão de registro
+## 🚀 Deployment
 
-4.
-Alteração de status
+### Docker Compose (Produção)
 
-
-
-
-🚀 Deployment
-
-Docker Compose (Produção)
-
-YAML
-
-
+```yaml
 version: '3.8'
 
 services:
@@ -1293,18 +845,15 @@ services:
 
 volumes:
   postgres_data:
+```
 
+⚠️ **Segurança:** Todas as credenciais são injetadas via variáveis de ambiente. Nunca commite valores sensíveis.
 
+### Variáveis de Ambiente
 
-⚠️ Segurança: Todas as credenciais são injetadas via variáveis de ambiente. Nunca commite valores sensíveis.
+**Backend (.env.example):**
 
-Variáveis de Ambiente
-
-Backend (.env.example):
-
-Plain Text
-
-
+```
 SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/jhonycar
 SPRING_DATASOURCE_USERNAME=jhonycar_user
 SPRING_DATASOURCE_PASSWORD=[CONFIGURE_SENHA_SEGURA]
@@ -1314,32 +863,25 @@ JWT_SECRET=[CONFIGURE_CHAVE_SECRETA_ALEATORIA]
 JWT_EXPIRATION=86400000
 APP_NAME=JhonyCar
 APP_VERSION=1.0.0
+```
 
+⚠️ **IMPORTANTE:** Nunca commite o arquivo `.env` com valores reais. Use `.env.example` como template.
 
+**Frontend (.env.example):**
 
-⚠️ IMPORTANTE: Nunca commite o arquivo .env com valores reais. Use .env.example como template.
-
-Frontend (.env.example):
-
-Plain Text
-
-
+```
 VITE_API_URL=http://localhost:8080/api
 VITE_APP_NAME=JhonyCar
 VITE_APP_VERSION=1.0.0
+```
 
+---
 
+## 🔧 Troubleshooting
 
+### Erro: Connection refused ao PostgreSQL
 
-
-
-🔧 Troubleshooting
-
-Erro: Connection refused ao PostgreSQL
-
-Bash
-
-
+```bash
 # Verificar se está rodando
 docker ps | grep postgres
 
@@ -1348,14 +890,11 @@ docker compose restart postgres
 
 # Ver logs
 docker compose logs postgres
+```
 
+### Erro: Redis connection failed
 
-
-Erro: Redis connection failed
-
-Bash
-
-
+```bash
 # Verificar se está rodando
 docker ps | grep redis
 
@@ -1364,37 +903,28 @@ redis-cli -h localhost ping
 
 # Reiniciar
 docker compose restart redis
+```
 
+### Erro: 401 Unauthorized
 
-
-Erro: 401 Unauthorized
-
-Bash
-
-
+```bash
 # Verificar token JWT
 # Confirmar que token está no header Authorization: Bearer {token}
 # Verificar se token não expirou
 # Fazer novo login se necessário
+```
 
+### Erro: CORS blocked
 
-
-Erro: CORS blocked
-
-Bash
-
-
+```bash
 # Verificar configuração de CORS no backend
 # Adicionar origem do frontend em SecurityConfig
 # Exemplo: http://localhost:5173
+```
 
+### Aplicação lenta
 
-
-Aplicação lenta
-
-Bash
-
-
+```bash
 # Verificar cache Redis
 redis-cli INFO stats
 
@@ -1403,71 +933,49 @@ redis-cli INFO stats
 
 # Verificar logs de performance
 docker compose logs backend | grep "took"
+```
+
+---
+
+## 📈 Roadmap
+
+### Versão 1.0 (Atual)
+
+✅ Gestão de clientes  
+✅ Gestão de veículos  
+✅ Ordens de serviço  
+✅ Orçamentos  
+✅ Financeiro básico  
+✅ Agenda  
+✅ Dashboard  
+
+### Versão 1.1 (Próxima)
+
+🔄 Integração com NF-e real  
+🔄 Relatórios avançados  
+🔄 Integração com Google Calendar  
+🔄 Notificações por email/SMS  
+🔄 App mobile (React Native)  
+
+### Versão 2.0 (Futuro)
+
+🔮 Integração com sistemas de pagamento  
+🔮 IA para previsão de demanda  
+🔮 Análise preditiva de manutenção  
+🔮 Marketplace de serviços  
+🔮 Integração com IoT para diagnóstico remoto  
 
 
 
+## 📄 Licença
+
+Este projeto está licenciado sob a MIT License — veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 
+## 📚 Referências
 
-📈 Roadmap
-
-Versão 1.0 (Atual )
-
-✅ Gestão de clientes
-✅ Gestão de veículos
-✅ Ordens de serviço
-✅ Orçamentos
-✅ Financeiro básico
-✅ Agenda
-✅ Dashboard
-
-Versão 1.1 (Próxima)
-
-🔄 Integração com NF-e real
-🔄 Relatórios avançados
-🔄 Integração com Google Calendar
-🔄 Notificações por email/SMS
-🔄 App mobile (React Native)
-
-Versão 2.0 (Futuro)
-
-🔮 Integração com sistemas de pagamento
-🔮 IA para previsão de demanda
-🔮 Análise preditiva de manutenção
-🔮 Marketplace de serviços
-🔮 Integração com IoT para diagnóstico remoto
-
-
-
-
-📄 Licença
-
-Este projeto está licenciado sob a MIT License — veja o arquivo LICENSE para detalhes.
-
-
-
-
-🙏 Contribuindo
-
-Contribuições são bem-vindas! Por favor, leia nosso CONTRIBUTING.md para detalhes sobre nosso código de conduta e processo de submissão de pull requests.
-
-
-
-📚 Referências
-
-•
-Spring Boot Documentation
-
-•
-React Documentation
-
-•
-PostgreSQL Documentation
-
-•
-Redis Documentation
-
-•
-Docker Documentation
-
-
+- [Spring Boot Documentation](https://spring.io/projects/spring-boot)
+- [React Documentation](https://react.dev/)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
+- [Redis Documentation](https://redis.io/documentation)
+- [Docker Documentation](https://docs.docker.com/)
